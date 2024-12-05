@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="estilosesion.css">
+</head>
+<body>
+    
+    <header>
+        <img src="imagenes/logo.png" alt="Logo del Refugio" class="logo">
+        <h1>Refugio de Mascotas</h1>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </header>
+
+    <nav id="nav-menu">
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#mascotas">Mascotas Disponibles</a></li>
+            <li><a href="#accesorios">Accesorios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+     <!-- Iniciar Sesión -->
+    <section id="login-register">
+        <h2>Iniciar Sesión</h2>
+        <form action="procesar_login.php" method="POST">
+            <input type="text" name="usuario" placeholder="Usuario" required>
+            <input type="password" name="password" placeholder="Contraseña" required>
+            <button type="submit">Ingresar</button>
+            <p>¿No tienes cuenta? <a href="#registro">Regístrate</a></p>
+        </form>
+    </section>
+
+    <!-- Registro -->
+    <section id="registro">
+        <h2>Regístrate</h2>
+        <form action="procesar_registro.php" method="POST">
+            <input type="text" name="usuario" placeholder="Usuario" required>
+            <input type="email" name="email" placeholder="Correo Electrónico" required>
+            <input type="password" name="password" placeholder="Contraseña" required>
+            <input type="password" name="confirm_password" placeholder="Confirmar Contraseña" required>
+            <button type="submit">Registrarse</button>
+        </form>
+    </section>
+
+    <!-- Página de Bienvenida -->
+    <section id="inicio">
+        <h2>Bienvenido a Nuestro Refugio</h2>
+        <p>Aquí encontrarás a tu nuevo compañero. Cada uno de nuestros gatos y perros está esperando un hogar lleno de amor.</p>
+    </section>
+
+    <!-- Las demás secciones de tu contenido continúan igual -->
+    
+
+    
+    
+    <!-- Modal, scripts, y más -->
+    
+    
+
+    <!-- Mascotas Disponibles -->
+    <section id="mascotas">
+        <h2>Mascotas Disponibles</h2>
+        <div class="mascota">
+            <h3>Perros</h3>
+            <div class="mascota-info">
+                <img src="imagenes/edf88b58-1041-4043-8313-2568aa96744e.jfif" alt="Rocco" class="mascota-img">
+                <div>
+                    <h4>Rocco</h4>
+                    <p>Edad: 2 años</p>
+                    <p>Raza: Labrador</p>
+                    <p>Descripción: Rocco es un perro enérgico y juguetón que adora las caminatas al aire libre. ¡Ideal para familias activas!</p>
+                    <button onclick="openAdoptionForm('Rocco')">Adoptar</button>
+                </div>
+            </div>
+            <!-- Más información sobre mascotas aquí -->
+        </div>
+    </section>
+
+    <!-- Accesorios -->
+    <section id="accesorios">
+        <h2>Accesorios para tu Mascota</h2>
+        <p>¡Todo lo que necesitas para cuidar a tu nuevo amigo!</p>
+        <button onclick="showAccesorios()">Mostrar Accesorios</button>
+        <div id="accesorios-list" class="accesorios-list">
+            <ul>
+                <li>Collares y Correas</li>
+                <li>Juguetes</li>
+                <li>Camas</li>
+                <li>Alimentos y Snacks</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto">
+        <h2>Contáctanos</h2>
+        <p>Si tienes preguntas sobre la adopción o necesitas más información, no dudes en escribirnos.</p>
+        <form action="enviar_contacto.php" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>¡Adopta, no compres! Dale a un animalito la oportunidad de tener un hogar.</p>
+        <p>Síguenos en nuestras redes sociales:</p>
+        <img src="imagenes/insta.png" alt="Instagram" class="social-icon">
+        <img src="imagenes/whasap.png" alt="WhatsApp" class="social-icon">
+        <img src="imagenes/facebook.png" alt="Facebook" class="social-icon">
+    </footer>
+
+    <!-- Scripts -->
+    <script src="scripts.js"></script>
+    
+</body>
+</html>
